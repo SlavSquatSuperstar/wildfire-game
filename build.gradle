@@ -3,16 +3,33 @@ plugins {
     id 'application'
 }
 
+description = 'Infection-themed video game developed for high-school senior project'
+
 group 'io.github.slavsquatsuperstar'
 version '1.0.1'
-sourceCompatibility = targetCompatibility = 1.11
-mainClassName = 'wildfire.WildfireLauncher'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: '*.jar')
 }
 
-jar {
-    manifest.attributes 'Main-Class': mainClassName
-    manifest.attributes 'Class-Path': configurations.runtimeClasspath.files.collect { it.absolutePath }.join(' ')
+tasks {
+    wrapper {
+        gradleVersion = '9.7.0'
+        distributionType = Wrapper.DistributionType.BIN
+    }
+
+    application {
+        mainClass = 'wildfire.WildfireLauncher'
+    }
+
+    jar {
+        manifest.attributes 'Main-Class': application.mainClass
+        manifest.attributes 'Class-Path': configurations.runtimeClasspath.files.collect { it.absolutePath }.join(' ')
+    }
 }
