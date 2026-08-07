@@ -33,3 +33,11 @@ tasks {
         from(zipTree(file('libs/greenfoot-main.jar'))) // Fat jar
     }
 }
+
+tasks.register('package', Zip) {
+    dependsOn(jar)
+    from(file('build/libs'), file('dist/'))
+    include('*.jar', '*.txt', '*.pdf')
+    destinationDirectory = file('dist/')
+    archiveFileName = "Wildfire-${project.version}.zip"
+}
