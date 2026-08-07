@@ -252,13 +252,13 @@ public class WildfireWorld extends World {
      * Attempts to find a path between both endpoints. See the A* Pathfinding Algorithm:
      * https://www.youtube.com/watch?v=-L-WgKMFuhE
      *
-     * @ return Whether the pathfinding was successful.
+     * @return Whether the pathfinding was successful.
      */
     public boolean checkForWin() {
-        if (getObjects(Buildable.class).size() < (int) start.getDistance(finish))         // Skip if too few tiles
-            return false;
-        if (!(start.hasNeighbour() && finish.hasNeighbour())) // Skip if both sides have no neighbours
-            return false;
+        // Skip if too few tiles
+        if (getObjects(Buildable.class).size() < (int) start.getDistance(finish)) return false;
+        // Skip if both sides have no neighbours
+        if (!(start.hasNeighbour() && finish.hasNeighbour())) return false;
 
         List<Buildable> open = new ArrayList<>();
         List<Buildable> closed = new ArrayList<>();
@@ -317,7 +317,7 @@ public class WildfireWorld extends World {
     // Tile Methods
 
     /**
-     * @return If there are any unlocked buildable tiles adjacent to the given cell.
+     * Check if there are any unlocked buildable tiles adjacent to the given cell.
      */
     public boolean checkAdjacent(int x, int y) {
         int[][] coords = {{x, y - 1}, {x, y + 1}, {x - 1, y}, {x + 1, y}};

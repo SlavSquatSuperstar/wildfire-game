@@ -1,6 +1,6 @@
 package wildfire.actors.tiles;
 
-import greenfoot.*;
+import greenfoot.GreenfootImage;
 import wildfire.Assets;
 import wildfire.Constants;
 import wildfire.Counter;
@@ -86,18 +86,13 @@ public class BridgeTile extends Buildable {
 
         // Draw the damage overlay
         // Keep as "if" to layer multiple textures
-        if (percentHealth() <= 0.25)
-            drawImage(Assets.OVERLAY3);
-        if (percentHealth() <= 0.5)
-            drawImage(Assets.OVERLAY2);
-        if (percentHealth() <= 0.75)
-            drawImage(Assets.OVERLAY1);
+        if (percentHealth() <= 0.25) drawImage(Assets.OVERLAY3);
+        if (percentHealth() <= 0.5) drawImage(Assets.OVERLAY2);
+        if (percentHealth() <= 0.75) drawImage(Assets.OVERLAY1);
 
         // Draw the status overlay
-        if (state == State.BURNING)
-            drawImage(Assets.FLAME);
-        else if (state == State.WET)
-            drawImage(Assets.WATER_OVERLAY);
+        if (state == State.BURNING) drawImage(Assets.FLAME);
+        else if (state == State.WET) drawImage(Assets.WATER_OVERLAY);
     }
 
     private void drawImage(GreenfootImage img) {

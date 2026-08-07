@@ -1,7 +1,5 @@
 package wildfire;
 
-import greenfoot.GreenfootImage;
-
 /**
  * A storage class for game parameters and statistics.
  */

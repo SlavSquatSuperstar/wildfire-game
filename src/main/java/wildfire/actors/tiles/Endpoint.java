@@ -1,8 +1,6 @@
 package wildfire.actors.tiles;
 
 import wildfire.Assets;
-import wildfire.Constants;
-import wildfire.actors.tiles.Buildable;
 
 /**
  * A start or finish tile on either side of the chasm.
@@ -21,7 +19,6 @@ public class Endpoint extends Buildable {
     @Override
     public void act() {
         // Prevent building on a locked tile until it has been reached
-        if (locked && hasNeighbour())
-            locked = false;
+        if (locked && hasNeighbour())  locked = false;
     }
 }

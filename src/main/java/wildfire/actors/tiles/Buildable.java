@@ -2,9 +2,7 @@ package wildfire.actors.tiles;
 
 import wildfire.Constants;
 
-import java.awt.Point;
-import java.awt.Rectangle;
-
+import java.awt.*;
 import java.util.List;
 
 /**
