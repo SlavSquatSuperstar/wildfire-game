@@ -1,6 +1,10 @@
-# Compiled class files
+# Build outputs
 *.class
 build/
+
+# Distribution files
+dist/*.jar
+dist/*.zip
 
 # Gradle files
 .gradle/

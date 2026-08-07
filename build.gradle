@@ -18,14 +18,14 @@ dependencies {
     implementation fileTree('libs/greenfoot-main.jar')
 }
 
+application {
+    mainClass = 'wildfire.WildfireLauncher'
+}
+
 tasks {
     wrapper {
         gradleVersion = '9.7.0'
         distributionType = Wrapper.DistributionType.BIN
-    }
-
-    application {
-        mainClass = 'wildfire.WildfireLauncher'
     }
 
     jar {
