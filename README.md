@@ -14,7 +14,7 @@ up—then it's game over!
 
 1. Install [JRE 11+](https://adoptium.net/temurin/releases/) for your operating system and architecture.
 2. Download and extract the latest archive under **Releases**.
-3. Double-click the **Wildfire- (version).jar** file to run the game.
+3. Double-click on or run `java -jar` with the **Wildfire-(version).jar** file to launch the game.
 
 ### Developers
 

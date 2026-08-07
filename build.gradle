@@ -15,7 +15,7 @@ java {
 }
 
 dependencies {
-    implementation fileTree('libs/greenfoot-main.jar')
+    implementation files('libs/greenfoot-main.jar') // Greenfoot sources
 }
 
 application {
@@ -30,6 +30,6 @@ tasks {
 
     jar {
         manifest.attributes 'Main-Class': application.mainClass
-        manifest.attributes 'Class-Path': configurations.runtimeClasspath.files.collect { it.absolutePath }.join(' ')
+        from(zipTree(file('libs/greenfoot-main.jar'))) // Fat jar
     }
 }

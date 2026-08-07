@@ -9,7 +9,7 @@ Exporting was made possible by Benoit Heinrich's Greenfoot Runner repository.
 How to Run
 - Download Java JRE 11 at https://adoptium.net/ and select your operating system and architecture.
 - Read "How to Play.pdf" for game instructions
-- Double-click on the .jar fire to open the game
+- Double-click on the .jar file or run "java -jar (filename)" with it to launch the game
 
 Resources
 - Greenfoot: https://greenfoot.org/door
