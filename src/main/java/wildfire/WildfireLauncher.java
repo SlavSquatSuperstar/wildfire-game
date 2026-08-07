@@ -1,26 +1,23 @@
 package wildfire;
 
-import bh.greenfoot.runner.GreenfootRunner;
 import wildfire.world.WildfireWorld;
 
 /**
- * The standalone launcher for the Greenfoot scenario.
- * See: https://github.com/benoitheinrich/greenfoot-runner
+ * The launcher for the Wildfire game.
  */
 public class WildfireLauncher extends GreenfootRunner {
 
-    static {
-        // 2. Bootstrap the runner class.
-        bootstrap(WildfireLauncher.class,
-                // 3. Prepare the configuration for the runner based on the world class
-                Configuration.forWorld(WildfireWorld.class)
-                        // Set the project name as you wish
-                        .projectName("Escape the Wildfire!")
-        );
+    public WildfireLauncher(Configuration configuration) {
+        super(configuration);
     }
 
-//    public static void main(String[] args) {
-//        GreenfootRunner.main(args);
-//    }
+    public static void main(String[] args) {
+        Configuration configuration = Configuration
+                .forWorld(WildfireWorld.class) // Greenfoot world
+                .projectName("Escape the Wildfire!") // Window title
+                .lockScenario(false) // User set simulation speed
+                .hideControls(false); // Start and reset buttons
+        new WildfireLauncher(configuration);
+    }
 
 }
