@@ -26,6 +26,3 @@ doc/
 
 # macOS files
 *.DS_store
-
-# GIMP files
-*.xcf
