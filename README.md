@@ -40,6 +40,10 @@ Packages and source code for modern BlueJ/Greenfoot versions are available on
 If you want to use a different Greenfoot version, you may need to recompile the library yourself. See also this
 [tutorial](https://github.com/Rc-Cookie/greenfoot-sources-combined/) for writing standalone Greenfoot projects.
 
+## Video Demo
+
+A gameplay demonstration is available at [demo.webm](demo.webm).
+
 ## Credits
 
 - Thanks to Benoit Heinrich for creating the Greenfoot Runner repository.
